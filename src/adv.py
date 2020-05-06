@@ -1,6 +1,7 @@
 from room import Room
 
 # Declare all the rooms
+from player as player
 
 room = {
     'outside':  Room("Outside Cave Entrance",
@@ -38,7 +39,9 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
-
+player_name = input("Your name here")
+player_one = Player(player_name, room['outside'])
+# player_two = Player(layer_name, room['foyer']) 
 # Write a loop that:
 #
 # * Prints the current room name
