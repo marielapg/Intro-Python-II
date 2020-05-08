@@ -2,9 +2,10 @@
 # currently.
 
 class Player: 
-    def __init__(self, name, location, items = None)
-    self.name = name
-    self.location = location 
-    self.items =items
-    if self.items is None:
-        self.items =[]
+    def __init__(self, name, location, items = []):
+        self.name = name
+        self.location = location 
+        self.items =items
+    def pickup(self, itemName):
+        self.location.items.remove(itemName)
+        self.items.append(itemName)
